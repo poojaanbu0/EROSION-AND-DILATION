@@ -72,13 +72,13 @@ plt.axis('off')
 ```
 
 ## Output:
-Display the input text Image:
+### Display the input text Image:
 1
 
-Display the Eroded text Image:
+### Display the Eroded text Image:
 2
 
-Display the Dilated text Image:
+### Display the Dilated text Image:
 3
 
 ## Result:
