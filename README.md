@@ -47,7 +47,7 @@ text_image = np.zeros((100,300),dtype = 'uint8')
 font = cv2.FONT_HERSHEY_SCRIPT_COMPLEX = 7
 cv2.putText(text_image,"Javith",(5,70),font,2,(255),5,cv2.LINE_AA)
 plt.title("Original Text Image")
-plt.imshow(text_image,'bone')
+plt.imshow('created_text',img)
 plt.axis('off')
 ```
 ```python
