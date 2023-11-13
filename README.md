@@ -38,19 +38,18 @@ Register No: 212222240072
 import cv2
 import numpy as np
 
-
 # Create the Text using cv2.putText
 
 IMg= np.zeros((350,1400),dtype ='uint8')
 font = cv2.FONT_HERSHEY_SIMPLEX
-cv2.putText(img,'M.Rajeshkannan',(15,200),font,5,(255),10,cv2.LINE_AA)
+cv2.putText(img,'poo',(15,200),font,5,(255),10,cv2.LINE_AA)
 cv2.imshow('created_text',img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+```
 
+```python
 # Create the structuring element
-
-
 
 # Erode the image
 
@@ -65,8 +64,9 @@ image_erode2 = cv2.erode(img,erode2)
 cv2.imshow('Eroded_image_2',image_erode2)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-
 ```
+
+```python
 # Dilate the image
 
 dilate1= np.ones((5,5),np.uint8)
