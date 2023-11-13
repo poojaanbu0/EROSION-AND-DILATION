@@ -29,47 +29,57 @@ End the program.
 ## Program:
 ```
 Program to implement Erosion and Dilation using Python and OpenCV.
-Developed by : Pooja A
-Register No : 212222240072
+Developed by: Pooja A
+Register No: 212222240072
 ```
 
 ```python
-# Import the necessary packages:
-
+# Import the necessary packages
 import cv2
 import numpy as np
-import matplotlib.pyplot as plt
-```
-```python
-# Create the Text using cv2.putText:
 
-text_image = np.zeros((100,300),dtype = 'uint8')
-font = cv2.FONT_HERSHEY_SCRIPT_COMPLEX = 7
-cv2.putText(text_image,"Javith",(5,70),font,2,(255),5,cv2.LINE_AA)
-plt.title("Original Text Image")
-plt.imshow('created_text',img)
-plt.axis('off')
-```
-```python
-# Create the structuring element:
 
-kernel = cv2.getStructuringElement(cv2.MORPH_CROSS,(7,7))
-```
-```python
-# Erode the image:
+# Create the Text using cv2.putText
 
-image_erode = cv2.erode(text_image,kernel)
-plt.title("Eroded Text Image")
-plt.imshow(image_erode,'bone')
-plt.axis('off')
-```
-```python
-# Dilate the image:
+IMg= np.zeros((350,1400),dtype ='uint8')
+font = cv2.FONT_HERSHEY_SIMPLEX
+cv2.putText(img,'M.Rajeshkannan',(15,200),font,5,(255),10,cv2.LINE_AA)
+cv2.imshow('created_text',img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 
-image_dilate = cv2.dilate(text_image,kernel)
-plt.title("Dilated Text Image")
-plt.imshow(image_dilate,'bone')
-plt.axis('off')
+# Create the structuring element
+
+
+
+# Erode the image
+
+erode1= np.ones((5,5),np.uint8)
+erode2 = cv2.getStructuringElement(cv2.MORPH_CROSS,(12,12))
+
+image_erode1 = cv2.erode(img,erode1)
+cv2.imshow('Eroded_image_1',image_erode1)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+image_erode2 = cv2.erode(img,erode2)
+cv2.imshow('Eroded_image_2',image_erode2)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+```
+# Dilate the image
+
+dilate1= np.ones((5,5),np.uint8)
+dilate2 = cv2.getStructuringElement(cv2.MORPH_CROSS,(12,12))
+
+image_dilate1 = cv2.dilate(img,dilate1)
+cv2.imshow('Dilated_image_1',image_dilate1)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+image_dilated2 = cv2.dilate(img,dilate2)
+cv2.imshow('Dilated_image_2',image_dilated2)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 ```
 
 ## Output:
