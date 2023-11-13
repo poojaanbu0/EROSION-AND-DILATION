@@ -33,14 +33,14 @@ Developed by : Pooja A
 Register No : 212222240072
 ```
 
-```
+```python
 # Import the necessary packages:
 
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 ```
-```
+```python
 # Create the Text using cv2.putText:
 
 text_image = np.zeros((100,300),dtype = 'uint8')
@@ -50,12 +50,12 @@ plt.title("Original Text Image")
 plt.imshow(text_image,'bone')
 plt.axis('off')
 ```
-```
+```python
 # Create the structuring element:
 
 kernel = cv2.getStructuringElement(cv2.MORPH_CROSS,(7,7))
 ```
-```
+```python
 # Erode the image:
 
 image_erode = cv2.erode(text_image,kernel)
@@ -63,7 +63,7 @@ plt.title("Eroded Text Image")
 plt.imshow(image_erode,'bone')
 plt.axis('off')
 ```
-```
+```python
 # Dilate the image:
 
 image_dilate = cv2.dilate(text_image,kernel)
